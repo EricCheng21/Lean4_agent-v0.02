@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "domain": "minimal_propositional_logic",
+  "problems": [
+    {
+      "id": "identity",
+      "target": {
+        "kind": "imp",
+        "left": {"kind": "atom", "name": "P"},
+        "right": {"kind": "atom", "name": "P"}
+      }
+    },
+    {
+      "id": "and_left",
+      "target": {
+        "kind": "imp",
+        "left": {
+          "kind": "and",
+          "left": {"kind": "atom", "name": "P"},
+          "right": {"kind": "atom", "name": "Q"}
+        },
+        "right": {"kind": "atom", "name": "P"}
+      }
+    },
+    {
+      "id": "and_swap",
+      "target": {
+        "kind": "imp",
+        "left": {
+          "kind": "and",
+          "left": {"kind": "atom", "name": "P"},
+          "right": {"kind": "atom", "name": "Q"}
+        },
+        "right": {
+          "kind": "and",
+          "left": {"kind": "atom", "name": "Q"},
+          "right": {"kind": "atom", "name": "P"}
+        }
+      }
+    },
+    {
+      "id": "pair",
+      "target": {
+        "kind": "imp",
+        "left": {"kind": "atom", "name": "P"},
+        "right": {
+          "kind": "imp",
+          "left": {"kind": "atom", "name": "Q"},
+          "right": {
+            "kind": "and",
+            "left": {"kind": "atom", "name": "P"},
+            "right": {"kind": "atom", "name": "Q"}
+          }
+        }
+      }
+    }
+  ]
+}
+
